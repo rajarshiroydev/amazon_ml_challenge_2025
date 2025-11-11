@@ -33,3 +33,8 @@ Given product image and textual product details such as item name, description, 
 6. Trained an XGBoost with 5-fold cross-validation and early-stopping with GPU acceleration.
 
 7. Produced Out-of-fold (OOF) predictions for unbiased validation and per-fold SMAPE scores for evaluating model stability across folds.
+
+# Training Results
+Fold SMAPE scores: ['49.2047%', '48.0522%', '48.4541%', '47.4840%', '48.2107%']\
+Fold std: 0.5614%\
+Mean fold: 48.2811%
