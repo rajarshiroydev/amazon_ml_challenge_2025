@@ -18,7 +18,7 @@ Given product image and textual product details such as item name, description, 
 
 # Solution Approach
 
-![Process Flow](process_flow_diagram.png "Process Flow")
+![Process Flow](docs/process_flow_diagram.png "Process Flow")
 
 1. Features such as `item_name`, `bullet_points` and `product_description` are extracted `catalog_content` column.
 
