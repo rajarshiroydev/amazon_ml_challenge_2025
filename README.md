@@ -20,11 +20,11 @@ Given product image and textual product details such as item name, description, 
 
 ![Process Flow](docs/process_flow_diagram.png "Process Flow")
 
-1. Features such as `item_name`, `bullet_points` and `product_description` are extracted `catalog_content` column.
+1. Features such as `item_name`, `bullet_points` and `product_description` were extracted from the `catalog_content` column.
 
-2. Using marqo-ecommerce-embeddings-L embedding model, 1024 dimension embedding vectors were generated from product images and the extracted text features. A weighted fusion of the vectors for the text features was done.
+2. Using marqo-ecommerce-embeddings-L embedding model, 1024 dimension embedding vectors were generated from product images and the weighted extracted text features. 
 
-3. Extracted the numeric `Value` (e.g., “Value: 72.0”) and measurement unit following the keyword `Unit` (e.g., Ounce, Count, Fl Oz) using regular expressions. Computed multiple numerical transformations such as `log_value`, and `sqrt_value`. to capture non-linear effects:
+3. Extracted the numeric `Value` (e.g., “Value: 72.0”) and measurement unit following the keyword `Unit` (e.g., Ounce, Count, Fl Oz) using regular expressions. Computed multiple numerical transformations such as `log_value`, and `sqrt_value` to capture non-linear effects.
 
 4. Detected pack-quantity such as “Pack of 6”, “6-pack”, “12 count” and expanded on feature set with `pack_quantity`, `log_pack`, `total_quantity` = `value` × `pack_quantity` and its log and sqrt variants.
 
